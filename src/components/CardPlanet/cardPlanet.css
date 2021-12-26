@@ -1,0 +1,86 @@
+.capitalize{
+    text-transform: capitalize;
+}
+
+main .card {
+    width: 300px;
+    max-width:320px;
+    height:300px;
+    position: relative;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 50px;
+    z-index: 10;
+    background: linear-gradient(
+      200deg,
+      rgba(2, 0, 36, 0.8)15%,
+      rgba(121, 76, 9, 0.8) 100%,
+      rgba(121, 76, 9, 0.8) 100%,
+      rgb(120 84 48 / 50%) 100%
+    ),url('../../assets/images/textura.jpg');
+
+    color: white;
+    box-shadow: inset -30px 30px 20px rgba(0,0,0,0.8), 
+    inset 1px -1px 2px rgb(172 165 165 / 60%),
+    inset 30px -30px 20px rgba(0,0,0,0.8);
+border:none;
+    border-radius: 50%;
+    text-align: center;
+    transition: 4s;
+    display:flex;
+    flex-direction:column;
+    align-item:center;
+    justify-content:space-evenly;
+    background-position:50% 100%
+  }
+  
+  main .card:hover {
+    background: linear-gradient(
+        200deg,
+        rgba(2, 0, 36, 0.7)15%,
+        rgba(121, 76, 9, 0.7) 100%,
+        rgba(121, 76, 9, 0.7) 100%,
+        rgba(205, 111, 16, 0.7) 100%
+      ),url('../../assets/images/textura.jpg');
+      background-position:70% 10%;
+      transition: 4s;
+  box-shadow: inset -10px 10px 20px rgba(0,0,0,0.8),
+   inset 10px -10px 10px rgb(172 165 165 / 50%),
+  inset 100px -100px 30px rgba(0,0,0,0.8);
+ 
+  }
+  
+  main .card h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 150%;
+    cursor:context-menu;
+    margin:10px;
+    
+  }
+
+  main .card p {
+    cursor:context-menu;
+    margin:5px;
+    color: bisque;
+  }
+  
+  main .card .icon {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+  }
+  
+  main .card span i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+}
+main .card span i.active {
+    color:rgba(238, 238, 77, 0.83);
+    filter:drop-shadow(0 0 2px white);
+    transition:1s
+  }

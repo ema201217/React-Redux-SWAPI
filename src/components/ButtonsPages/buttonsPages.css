@@ -1,0 +1,35 @@
+main .buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 5px;
+  }
+  
+  main .buttons button {
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    background: linear-gradient(
+      27deg,
+      rgba(2, 0, 36, 0.7) 0%,
+      rgba(121, 76, 9, 0.7) 100%,
+      rgba(121, 76, 9, 0.7) 100%,
+      rgba(205, 111, 16, 0.7) 100%
+    );
+    border-radius: 10px;
+    color: #cd6f10;
+    font-weight: bold;
+    border: none;
+  }
+  
+  main .buttons button:hover {
+    background: linear-gradient(
+      27deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(121, 76, 9, 1) 100%,
+      rgba(121, 76, 9, 1) 100%,
+      rgba(205, 111, 16, 1) 100%
+    );
+  }

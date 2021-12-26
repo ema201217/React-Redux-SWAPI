@@ -11,7 +11,7 @@ import stars from "./assets/images/stars.gif";
 import error404 from "./assets/images/404Error.png";
 
 /* COMPONENTS */
-import { NavBar } from "./components/NavBar";
+import { NavBar } from "./components/Navbar/NavBar";
 import { ContentPlanets } from "./components/ContentPlanets";
 import { ContentPlanetsFavorites } from "./components/ContentPlanetsFavorites";
 
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        {/* Proveemos a la aplicación el almacenamiento de reducers creado con redux enviandolo como props*/}
+        {/* Proveemos a la aplicación el almacenamiento de reducers creado con redux (enviando como props)*/}
         <Provider store={store}>
           <header>
             <NavBar />

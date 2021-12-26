@@ -1,3 +1,8 @@
+/* Components Styles imports */
+@import url('../../components/ButtonsPages/buttonsPages.css');
+@import url('../../components/Navbar/navbar.css');
+@import url('../../components/CardPlanet/cardPlanet.css');
+
 * {
   box-sizing: border-box;
 }
@@ -5,8 +10,12 @@
 body {
   margin: 0;
   min-width: 320px;
+  top: 0 !important;
 }
 
+.skiptranslate{
+  display:none;
+}
 header {
   width: 100%;
   height: fit-content;
@@ -22,77 +31,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition:.7s;
+  opacity:0.9
 }
 
-header .navbar ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  gap: 5px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-header .navbar li {
-  display: flex;
-  width: fit-content;
-}
-
-header .navbar a:not(.linkSW) {
-  text-decoration: none;
-  color: #bf9f0e;
-  padding: 10px;
-  font-weight: bold;
-}
-
-header .navbar a:not(.linkSW):hover {
-  color: #cd6f10;
-}
-
-header .navbar img {
-  max-height: 50px;
-  filter: drop-shadow(2px 2px 1px white);
-}
-
-header .searchbar {
-  padding: 10px;
-  background-color: #42341faf;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0 10px #42341faf;
-}
-
-header .searchbar input {
-  border-radius: 10px;
-  padding: 5px;
-  padding-left: 10px;
-  font-weight: bold;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-header .searchbar input::placeholder {
-  color: #cd6f10af;
-}
-
-header .searchbar input:focus {
-  outline: none;
-  color: #996312;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-header .searchbar button {
-  background-color: transparent;
-  border: none;
-  color: #996312;
-  font-size: 1.2rem;
-  transition: 1s;
-}
-
-header .searchbar button:hover {
-  color: #cd6f10;
+header:hover {
+  opacity:1
 }
 
 main img {
@@ -102,42 +46,7 @@ main img {
     z-index: -1;
     width: 100%;
     height: 100%;
-}
-
-main .buttons {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-  gap: 5px;
-}
-
-main .buttons button {
-  padding: 20px;
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-  background: linear-gradient(
-    27deg,
-    rgba(2, 0, 36, 0.7) 0%,
-    rgba(121, 76, 9, 0.7) 100%,
-    rgba(121, 76, 9, 0.7) 100%,
-    rgba(205, 111, 16, 0.7) 100%
-  );
-  border-radius: 10px;
-  color: #cd6f10;
-  font-weight: bold;
-  border: none;
-}
-
-main .buttons button:hover {
-  background: linear-gradient(
-    27deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(121, 76, 9, 1) 100%,
-    rgba(121, 76, 9, 1) 100%,
-    rgba(205, 111, 16, 1) 100%
-  );
+    filter: grayscale(1);
 }
 
 main .containerCards {
@@ -147,58 +56,4 @@ main .containerCards {
   padding: 20px;
 }
 
-main .card {
-  width: 300px;
-  min-width: 300px;
-  position: relative;
-  border: 1px solid black;
-  margin: 10px;
-  padding: 50px;
-  z-index: 10;
-  background: rgb(121, 76, 9);
-  background: linear-gradient(
-    60deg,
-    rgba(2, 0, 36, 0.7) 15%,
-    rgba(121, 76, 9, 0.7) 100%,
-    rgba(121, 76, 9, 0.7) 100%,
-    rgba(205, 111, 16, 0.7) 100%
-  );
-  color: white;
-  box-shadow: inset 0 0 10px black;
-  border-radius: 5%;
-  text-align: center;
-  transition: 1s;
-}
 
-main .card:hover {
-  border-bottom: 3px solid gray;
-  background: linear-gradient(
-    60deg,
-    rgba(2, 0, 36, 1) 15%,
-    rgba(121, 76, 9, 0.9) 100%,
-    rgba(121, 76, 9, 0.9) 100%,
-    rgba(205, 111, 16, 1) 100%
-  );
-  border-radius: 50%;
-}
-
-main .card h1 {
-  text-transform: uppercase;
-  text-align: center;
-  min-width: 200px;
-}
-
-main .card span {
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 20px;
-  font-size: 1.5rem;
-}
-
-main .card span i {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 1.5rem;
-}

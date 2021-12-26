@@ -1,10 +1,10 @@
 /* IMPORTO LA IMAGEN DEL LOGO */
-import starWars from "../assets/images/SW.png";
+import starWars from "../../assets/images/SW.png";
 /* IMPORTO LOS ESTILOS  */
-import "../assets/styles/styles.css";
+import "../../assets/styles/styles.css";
 
 /* IMPORTO LA ACCIÓN CREADA EN EL STORE CON REDUX PARA BUSCAR PLANETAS  */
-import {searchPlanetsAction} from '../redux/planetDucks'
+import {searchPlanetsAction} from '../../redux/planetDucks'
 /* IMPORTO LA FUNCIÓN QUE NOS PROVEE react-redux */
 import { useDispatch } from "react-redux";
 /* IMPORTO EL HOOK QUE NOS PROVEE react */
@@ -28,6 +28,9 @@ const handleSubmit = (e) =>{
 }
 
   return (
+    <>
+    <span id="google_translate_element" style={{display: "none"}}></span>
+  
     <nav className="navbar">
       <ul>
         <li>
@@ -58,5 +61,6 @@ const handleSubmit = (e) =>{
         </li>
       </ul>
     </nav>
+    </>
   );
 };
