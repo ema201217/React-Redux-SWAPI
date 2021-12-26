@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+/* REDUX */
+import generateStore from "./redux/store";
+import { Provider } from "react-redux";
 
-function App() {
+/* REACT ROUTER DOM */
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+
+
+/* IMAGES */
+import stars from "./assets/images/stars.gif";
+import error404 from "./assets/images/404Error.png";
+
+/* COMPONENTS */
+import { NavBar } from "./components/NavBar";
+import { ContentPlanets } from "./components/ContentPlanets";
+import { ContentPlanetsFavorites } from "./components/ContentPlanetsFavorites";
+
+
+export default function App() {
+  const store = generateStore();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        {/* Proveemos a la aplicación el almacenamiento de reducers creado con redux enviandolo como props*/}
+        <Provider store={store}>
+          <header>
+            <NavBar />
+          </header>
+          <main>
+            <img src={stars} alt="stars" className="stars" />
+            <Routes>
+              <Route path="/favoritos" element={<ContentPlanetsFavorites />} />
+              <Route path="/" element={<ContentPlanets />} />
+              <Route path="*" element={<img src={error404} alt="Pagina no encontrada"/>}/>
+            </Routes>
+          </main>
+        </Provider>
+      </BrowserRouter>
+    </>
   );
 }
-
-export default App;
