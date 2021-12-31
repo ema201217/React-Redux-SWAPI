@@ -1,6 +1,7 @@
 # Challenge realizado con react y redux
 
 ### Este proyecto consiste en el consumo de la api [SWAPI](https://swapi.dev/)
+![gif](/git/1.gif)
 
 ### Lo que mas me gusto de este proyecto fue:
 -  La funcionalidad de favoritos
